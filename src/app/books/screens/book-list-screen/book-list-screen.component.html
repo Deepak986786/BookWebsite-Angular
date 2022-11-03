@@ -1,0 +1,18 @@
+
+<div *ngIf="books && books.length">
+        <h3 class="text-center p-2 text-2xl text-teal-600 font-sans">Books List </h3>
+        <hr class="w-[90%] bg-center ml-[5%]">
+    <div class="grid grid-cols-3 gap-8 p-14">
+
+                <div class="w-2/3 bg-slate-400" *ngFor="let book of books">
+                    
+                    <book-card
+                                
+                                 [book]="book"
+                     
+                     ></book-card>
+
+                </div>
+    </div>
+
+</div>

@@ -1,0 +1,34 @@
+<!-- <h2 class="text-center text-teal-700 text-2xl font-serif">Recommended Books</h2>
+
+                            <hr class="w-[100%] mt-4 mb-2">
+                         
+                            <div class="grid grid-cols-2 gap-4">
+                         
+                                <div class="w-full p-2">
+                                   <img [src]='book.coverUrl' alt='book.name' class="w-56 h-64"/>
+                                 </div>
+                                <div class="p-2">
+                                     <h3 class="text-xl font-serif text-teal-700">{{book.title}}</h3>
+                                     <p >{{book.description |trim:200}}</p>
+                                     
+                                     <div class="p-2 m-4">
+                                         <tag-list [tags]="book.tagList"></tag-list>
+                                     </div>
+                                     
+                         
+                                </div>
+                            </div> -->
+
+
+                            
+
+
+                            <div class="p-2 w-56 flex flex-col place-content-center bg-red-900">
+                                <div class="bg-yellow-400 flex place-content-center">
+                                    <img [src]='book!.coverUrl' alt='author.name' class="w-40 h-40 rounded-full"/>
+                                </div>
+                                <h6 class="m-2">{{book.title}}</h6>
+                                <p>By : {{book.author.name}}</p>
+                                
+                    
+                       </div> 

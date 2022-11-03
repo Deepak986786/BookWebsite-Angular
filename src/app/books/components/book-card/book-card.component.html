@@ -1,0 +1,13 @@
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg h-full">
+    <img class="w-full h-48" [src]="book!.coverUrl" alt="author"  [routerLink]="['/book/details',book!.id]">
+    <div class="px-6 py-4  h-40" >
+      <div class="font-bold text-lg mb-2 h-10">{{book!.title}}</div>
+      <p class="text-gray-700 text-sm h-30">
+       {{book!.description | trim : 100}}
+      </p>
+    </div>
+    <div class="px-6 pt-4 pb-2">
+       <i [ngClass]="favStyle" (click)="addToFavorite()"></i>
+    </div>
+  </div>

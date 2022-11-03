@@ -1,0 +1,27 @@
+<app-popup [(visible)]="showDeleteDialog" title="Delete Author?" [preventDefault]="true"
+    confirmText="Confirm Delete"
+    confirmClass="btn-danger" (done)="handleDelete($event)">
+    <p>Please review the Book details before you regret deleting!!!</p>
+    <div class="row">
+        <div class="col col-6">
+            <img [src]="book!.coverUrl" class="small-image" />
+        </div>
+        <div class="col col-6">
+           Title : {{book!.title}}
+        </div>
+    </div>
+</app-popup>
+
+<app-popup [(visible)]="showErrorPrompt" [title]="errorTitle">
+    {{errorMessage}}
+</app-popup>
+
+
+<div class="p-8">
+    <book-details [book]="book"></book-details>
+</div>
+
+<hr class="w-[90%] ml-[5%]">
+<div class="m-4">
+    <button class="btn btn-danger" (click)="showDeleteDialog=true"> <i class="bi bi-trash"></i>Remove Book</button>
+</div>

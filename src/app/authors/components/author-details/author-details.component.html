@@ -1,0 +1,25 @@
+
+
+
+<div *ngIf="author">
+    <h3>{{author.name}}</h3>
+    <div class="row">
+        <div class="col col-md-8">
+            <info-line title="Email" [value]="author.social.email"></info-line>
+            <info-line title="WebSite" [value]="author.social.website"></info-line>
+            <info-line title="Birth Date" [value]="author.birthDate|date:'longDate'"></info-line>
+            <info-line title="Death Date" [value]="author.deathDate|date:'longDate'"></info-line>
+            <h3>Tags</h3>
+            <tag-list [tags]="author.tagList"></tag-list>
+        </div>
+        <div class="col col-md-4">
+            <img class="author-profile-photo" [src]="author.photoUrl" [alt]="author.name" />
+        
+             
+        </div>
+
+    </div>
+    <h3 class=" text-2xl font-serif text-teal-700 p-2">Biography</h3>
+    <hr class="w-[90%] ml-[5%]">
+    <p class="text-base font-serif">{{author.biography}}</p>
+</div>

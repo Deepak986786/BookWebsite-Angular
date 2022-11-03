@@ -1,0 +1,104 @@
+<div class=" w-full h-16 grid grid-flow-col table-fixed bg-slate-300">
+
+  <div class="grid place-content-center">
+    <h4 class=" text-teal-900 text-4xl"><a [routerLink]="['/']">Book's Gallery</a></h4>
+  </div>
+  <div class="grid content-center">
+    <div class="grid grid-flow-col p-2">
+      <ul class="grid grid-flow-col">
+        <li class="">
+            <a [routerLink]='["/author/list"]' routerLinkActive="active" 
+               [routerLinkActiveOptions]="{exact:true}">
+               <i class="fa-solid fa-list"></i>Authors</a>
+        </li>
+
+        <li>
+            <a [routerLink]="['author/add']" routerLinkActive="active" 
+            [routerLinkActiveOptions]="{exact:true}">
+              <i class="fa-solid fa-plus"></i>Add Authors</a>
+        </li>
+
+        <li>
+          <a [routerLink]='["/book/list"]' routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact:true}">
+            <i class="fa-solid fa-list"></i>Books</a>
+          </li>
+        <li>
+          <a [routerLink]='["/book/add"]' routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact:true}">
+            <i class="fa-solid fa-plus"></i>Add Books</a>
+          </li>
+  
+      </ul>
+    </div>
+  </div>
+  <div class=" grid place-content-center">
+    <membership></membership>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-transparent bg-teal-800" >
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/']" >{{title}}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link"  aria-current="page" [routerLink]='["/author/list"]'><i class="fa-solid fa-list"></i>Authors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hover:text-yellow-500" [routerLink]="['author/add']"><i class="fa-solid fa-plus"></i> Author</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" [routerLink]='["/book/list"]'><i class="fa-solid fa-list"></i>Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"   [routerLink]='["/book/add"]'><i class="fa-solid fa-plus"></i> Book</a>
+          </li>
+         <li>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+         </li>
+        </ul>
+
+        <ul class="navbar-nav mb-2 mb-lg-0 ">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" [routerLink]="['user/login']" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-user"></i>Members
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a  class="dropdown-item hover:text-yellow-500" [routerLink]='["/user/login"]'><i class="fa-solid fa-unlock"></i>Login</a></li>
+                <li><a  class="dropdown-item" [routerLink]='["/user/register"]'><i class="fa-solid fa-user-plus"></i>Register</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a   class="dropdown-item" href="#"><i class="fa-solid fa-lock"></i>Logout</a></li>
+              </ul>
+            </li>
+
+          </ul>
+      </div>
+    </div>
+  </nav> -->

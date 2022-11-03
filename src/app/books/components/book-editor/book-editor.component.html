@@ -1,0 +1,61 @@
+<div *ngIf="book" class="container-fluid  flex  place-content-center p-2">
+    
+
+    <div class='row w-2/4 bg-slate-300 flex flex-row place-content-center p-2 border'>
+        <h3 class="text-center p-4 text-teal-700 text-2xl">Add New Book</h3>
+        <div class="col col-12">
+            <label for="id" class="form-label">Book Id</label>
+            <input type="text" id="id" class="form-control"  [(ngModel)]='book.id' 
+                required
+            />
+
+            <label for="title" class="form-label">Title</label>
+            <input type="text" id="title" class="form-control" [(ngModel)]="book.title" 
+                required
+            />
+
+            <label for="coverUrl" class="form-label">Cover URL</label>
+            <input type="text" id="coverUrl" class="form-control" [(ngModel)]="book.coverUrl"
+                required
+            >
+
+              
+            <label for="authorId" class="form-label">Author Id</label>
+            <input type="text" id="authorId" class="form-control" [(ngModel)]="book.authorId"
+                required
+            >
+
+            
+            
+            
+            <label for="description" class="form-label">Description</label>
+            <textarea type="text" id="description" class="form-control" [(ngModel)]="book.description"
+            required minlength="50" maxlength="2000"
+            ></textarea>
+            
+            
+            <label for="rating" class="form-label">Rating</label>
+            <input type="text" id="rating" class="form-control" [(ngModel)]="book.rating"
+                required
+            >
+
+            <label for="tags" class="form-label">Tags</label>
+            <input type="text" id="tags" class="form-control" [(ngModel)]="book.tags"
+                required
+            >
+            <label for="price" class="form-label">Price</label>
+            <input type="text" id="price" class="form-control" [(ngModel)]="book.price"
+                required
+            >
+            
+            <button class="btn btn-primary bg-teal-700" (click)="handleSave()">Save Book</button>
+
+        </div>
+        <div class="col col-4">
+            <img [src]="book.coverUrl" class="author-profile-photo" />
+        </div>
+    </div>
+
+
+
+</div>

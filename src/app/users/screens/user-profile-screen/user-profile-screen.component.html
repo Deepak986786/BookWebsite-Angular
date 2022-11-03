@@ -1,0 +1,61 @@
+<!-- <div class="grid grid-cols-1 p-4 h-full">
+
+       <div class="grid grid-cols-2 gap-4  h-1/2 bg-blue-500 ">
+
+                <div class="p-8">
+                      <img class="w-full h-48"
+                       src="https://images-na.ssl-images-amazon.com/images/I/514S0rIdxeL._SX333_BO1,204,203,200_.jpg" alt="">
+                </div>
+
+
+
+         </div>
+
+  <hr class="w-full">
+
+  <div class=" bg-slate-700 h-1/2">
+            <h3>favoritebooks</h3>
+            <h3>favoriteauthors</h3>
+  </div>
+
+</div> -->
+
+
+<div class="p-4 w-full h-full ">
+       
+       <profile-card></profile-card>
+
+        <hr>
+        <!-- favorite part -->
+        <div class="p-2 grid">
+              <h2 class="text-center text-teal-700 text-2xl font-serif">Favorite Books</h2>
+
+              <hr class="w-[100%]  mt-4 mb-2">
+                     <div class="p-2"  *ngFor="let book of books">
+                            <favorite-card [book]="book"></favorite-card>
+                     </div>
+
+                     <div *ngIf="books.length === 0" class="p-2 m-4 text-center font-serif">
+                            <h4>No favorites </h4>
+                            <p>consider adding a few...</p>
+                     </div>
+                      
+                     <hr class="w-[100%]  mt-4 mb-2">
+
+
+                     <h2 class="text-center text-teal-700 text-2xl font-serif">Favorite Authors</h2>
+
+                            <hr class="w-[100%]  mt-4 mb-2">
+
+                     <div class="p-2" *ngFor="let author of authors">
+                            <favorite-author-card [author]="author"></favorite-author-card>
+                     </div>
+
+                     <div *ngIf="authors.length === 0" class="p-2 m-4 text-center font-serif">
+                            <h4>No favorites </h4>
+                            <p>consider adding a few...</p>
+                     </div>
+
+
+        </div>
+</div>
