@@ -12,7 +12,7 @@
                <i class="fa-solid fa-list"></i>Authors</a>
         </li>
 
-        <li>
+        <li *ngIf="loggedInUser">
             <a [routerLink]="['author/add']" routerLinkActive="active" 
             [routerLinkActiveOptions]="{exact:true}">
               <i class="fa-solid fa-plus"></i>Add Authors</a>
@@ -23,7 +23,7 @@
           [routerLinkActiveOptions]="{exact:true}">
             <i class="fa-solid fa-list"></i>Books</a>
           </li>
-        <li>
+        <li *ngIf="loggedInUser">
           <a [routerLink]='["/book/add"]' routerLinkActive="active" 
           [routerLinkActiveOptions]="{exact:true}">
             <i class="fa-solid fa-plus"></i>Add Books</a>

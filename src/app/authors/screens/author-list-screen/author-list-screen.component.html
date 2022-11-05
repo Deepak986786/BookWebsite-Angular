@@ -1,10 +1,10 @@
-<div *ngIf="authors && authors.length">
+<div *ngIf="authors && authors.length"   class="bg-gradient-to-r from-slate-200 to-stone-300">
     <h3 class="text-center p-2 text-2xl text-teal-600 font-sans">Authors List </h3>
     <hr class="w-[90%] ml-[5%]">
 
     <div class="grid grid-cols-3 gap-8 p-14">
 
-                <div class="w-2/3 bg-slate-400" *ngFor="let author of authors">
+                <div class="w-2/3" *ngFor="let author of authors">
                     
                     <author-card
                                  [routerLink]="['/author/details',author.id]"

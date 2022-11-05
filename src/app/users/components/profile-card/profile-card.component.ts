@@ -17,7 +17,7 @@ export class ProfileCardComponent implements OnInit {
     this.user = JSON.parse(this.user)
     this.user =this.user.user
     
-    // console.log(this.user);
+     console.log(this.user);
     
   }
 
